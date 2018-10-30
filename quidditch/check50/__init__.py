@@ -1,6 +1,6 @@
 from check50 import *
 
-class quidditch(Checks):
+class Quidditch(Checks):
 
 	@check()
 	def exists(self):
