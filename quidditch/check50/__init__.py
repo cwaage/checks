@@ -17,7 +17,7 @@ class quidditch(Checks):
 		"""Input of 2 Goals and Caught Snitch True Yields 170\n"""
 		self.spawn("./quidditch").stdin("2").stdin("1").stdout("170\n").exit(0) 
 	@check("compiles")
-	def test_2_true(self):
-		"""Input of 5 Goals and Caught Snitch True False 170\n"""
+	def test_5_false(self):
+		"""Input of 5 Goals and Caught Snitch False Yields 50\n"""
 		self.spawn("./quidditch").stdin("5").stdin("0").stdout("50\n").exit(0)
 	
