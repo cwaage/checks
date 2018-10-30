@@ -12,10 +12,10 @@ class Temp_Convert(Checks):
 		"""temp_convert.c compiles"""
 		self.spawn("clang -o temp_convert temp_convert.c -lcs50 -lm").exit(0)
 
-	# @check("compiles")
-	# def test_c_100(self):
-		# """Convert from Celcius True Temp 100 Yields 212.0\n"""
-		# self.spawn("./temp_convert").stdin("1").stdin("100").stdout("212.0\n").exit(0) 
+	@check("compiles")
+	def test_c_100(self):
+		"""Convert from Celcius True Temp 100 Yields 212.0\n"""
+		self.spawn("./temp_convert").stdin("1").stdin("100").stdout("212.0\n").exit(0) 
 	
   	# @check("compiles")
 	# def test_f_212(self):
