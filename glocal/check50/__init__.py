@@ -10,7 +10,7 @@ class glocal(Checks):
 	@check("exists")
 	def compiles(self):
 		"""glocal.c compiles"""
-		self.spawn("clang -o test glocal.c -lcs50 -lm").exit(0)
+		self.spawn("clang -o glocal glocal.c -lcs50 -lm").exit(0)
 
 	@check("compiles")
 	def test_in_five(self):
