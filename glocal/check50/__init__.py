@@ -30,5 +30,12 @@ class glocal(Checks):
 
 	@check("compiles")
 	def test_reject_foo(self):
-		"""rejects a non-numeric input of "foo" """
-		self.spawn("./glocal").stdin("foo").reject()
+		"""rejects a non-numeric input of "Levi" """
+		self.spawn("./glocal").stdin("Levi").reject()
+		
+	@check("compiles")
+	def test_reject_foo(self):
+		"""rejects a non-numeric input of "Meg" """
+		self.spawn("./glocal").stdin("Meg").reject()
+		
+		
