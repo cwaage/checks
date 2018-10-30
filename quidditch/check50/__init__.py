@@ -15,5 +15,5 @@ class quidditch(Checks):
 	@check("compiles")
 	def test_2_true(self):
 		"""Input of 2 Goald and True for Caught Snitch\n"""
-		self.spawn("./quidditch").stdin("2","1").stdout("Your team's final score is: 170\n").exit(0)
+		self.spawn("./quidditch").stdin("2").stdin("1").stdout("Your team's final score is: 170\n").exit(0)
 	
