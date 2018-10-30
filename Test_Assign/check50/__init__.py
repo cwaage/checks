@@ -13,6 +13,6 @@ class Test_Assign(Checks):
 		self.spawn("clang -o test test.c -lcs50 -lm").exit(0)
 
 	@check("compiles")
-	def test_41_cents(self):
+	def test_Waage_string(self):
 		"""Input of string Waage yields and output of Waage\n"""
 		self.spawn("./test").stdin("Waage").stdout("Waage\n").exit(0)
