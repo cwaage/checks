@@ -19,5 +19,15 @@ class Test_Assign(Checks):
 	
 	@check("compiles")
 	def test_in_neg_five(self):
-		"""Input of -5 yields and output of 0\n"""
-		self.spawn("./test").stdin("-5").stdout("0\n").exit(0)
+		"""Input of 10 yields and output of 15\n"""
+		self.spawn("./test").stdin("10").stdout("15\n").exit(0)
+	
+	@check("compiles")
+    	def test_reject_negative(self):
+        	"""rejects a negative input like -.1"""
+        	self.spawn("./text").stdin("-1").reject()
+		
+	@check("compiles")
+    	def test_reject_foo(self):
+        	"""rejects a non-numeric input of "foo" """
+        	self.spawn("./cash").stdin("foo").reject()
