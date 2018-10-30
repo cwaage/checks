@@ -17,10 +17,10 @@ class Temp_Convert(Checks):
 		"""Convert from Celcius True Temp 100 Yields 212.0\n"""
 		self.spawn("./temp_convert").stdin("1").stdin("100").stdout("212.0\n").exit(0) 
 	
-  	# @check("compiles")
-	# def test_f_212(self):
-		# """Convert from Celcius False Temp 212 Yields 100.0\n"""
-		# self.spawn("./temp_convert").stdin("0").stdin("212").stdout("100.0\n").exit(0)
+	@check("compiles")
+	def test_f_212(self):
+		"""Convert from Celcius False Temp 212 Yields 100.0\n"""
+		self.spawn("./temp_convert").stdin("0").stdin("212").stdout("100.0\n").exit(0)
     
     	# @check("compiles")
     	# def test_c_25(self):
