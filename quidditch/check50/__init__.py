@@ -12,8 +12,8 @@ class quidditch(Checks):
 		"""quidditch.c compiles"""
 		self.spawn("clang -o quidditch quidditch.c -lcs50 -lm").exit(0)
 
-	#@check("compiles")
-	#def test_2_true(self):
-		#"""Input of 5 yields and output of 10\n"""
-		#self.spawn("./quidditch").stdin("2",1).stdout("Your team's final score is: 170\n").exit(0)
+	@check("compiles")
+	def test_2_true(self):
+		"""Input of 5 yields and output of 10\n"""
+		self.spawn("./quidditch").stdin("2",1).stdout("Your team's final score is: 170\n").exit(0)
 	
