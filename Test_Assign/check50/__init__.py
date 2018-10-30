@@ -19,5 +19,5 @@ class Test_Assign(Checks):
 		
 	@check("compiles")
 	def test_RubberDuck_string(self):
-		"""Input of string Waage yields and output of Waage\n"""
+		"""Input of string Rubber Duck yields and output of Rubber Duck\n"""
 		self.spawn("./test").stdin("Rubber Duck").stdout("Rubber Duck\n").exit(0)
