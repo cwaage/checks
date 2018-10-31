@@ -22,7 +22,7 @@ class Array_Input(Checks):
     def test_reject_paris(self):
 	    """rejects a non-numeric input of "Paris" """
 	    self.spawn("./array_input").stdin("Paris").reject()
-
+	
 	@check("compiles")
 	def test_in_four(self):
 		"""Input of 4 yields and {5,6,7,8} output of 5 6 7 8 """
