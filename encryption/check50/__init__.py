@@ -16,3 +16,8 @@ class Encryption(Checks):
 	def test_175_114(self):
 		"""Test 175 and 114 Yields Success\n"""
 		self.spawn("./encryption").stdin("175").stdin("114").stdout("Success\n").exit(0)
+
+	@check("compiles")
+	def test_140_475(self):
+		"""Test 140 and 475 Yields Success\n"""
+		self.spawn("./encryption").stdin("140").stdin("475").stdout("Success\n").exit(0)
