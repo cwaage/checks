@@ -4,7 +4,7 @@ class Encryption(Checks):
 
 	@check()
 	def exists(self):
-		"""encryption.c exists"""
+		"""encryption.c exists """
 		self.require("encryption.c")
 
 	@check("exists")
