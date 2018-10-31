@@ -21,10 +21,3 @@ class Array_Input(Checks):
     def test_reject_paris(self):
 	    """rejects a non-numeric input of "Paris" """
 	    self.spawn("./array_input").stdin("Paris").reject()
-		
-	@check("compiles")
-	def test_c_100(self):
-		"""Convert from Celcius True Temp 100 Yields 212.0\n"""
-		self.spawn("./array_input").stdin("1").stdin("100").stdout("212.0\n").exit(0)
-	
-	
