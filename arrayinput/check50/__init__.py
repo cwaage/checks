@@ -25,5 +25,5 @@ class Array_Input(Checks):
 		
 	@check("compiles")
 	def test_in_four(self):
-		"""Input of 4 yields and {5,6,7,8} output of 5 6 7 8\n"""
+		"""Input of 4 yields and {5,6,7,8} output of 5 6 7 8 """
 		self.spawn("./array_input").stdin("4").stdin("5").stdin("6").stdin("7").stdin("8").stdout("5 6 7 8 ").exit(0)
