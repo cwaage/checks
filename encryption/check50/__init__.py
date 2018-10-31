@@ -24,5 +24,10 @@ class Encryption(Checks):
 		
 	@check("compiles")
 	def test_84_475(self):
-		"""Test 84 and  Yields Success\n"""
-		self.spawn("./encryption").stdin("84").stdin("475").stdout("Failed\n").exit(0)	
+		"""Test 84 and 475 Yields Failed\n"""
+		self.spawn("./encryption").stdin("84").stdin("475").stdout("Failed\n").exit(0)
+		
+	@check("compiles")
+	def test_140_95(self):
+		"""Test 140 and 95 Yields Failed\n"""
+		self.spawn("./encryption").stdin("140").stdin("95").stdout("Failed\n").exit(0)
