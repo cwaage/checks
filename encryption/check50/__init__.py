@@ -31,3 +31,15 @@ class Encryption(Checks):
 	def test_140_95(self):
 		"""Test 140 and 95 Yields Failed\n"""
 		self.spawn("./encryption").stdin("140").stdin("95").stdout("Failed\n").exit(0)
+		
+	@check("compiles")
+	def test_141_209(self):
+		"""Test 141 and 209 Yields Failed\n"""
+		self.spawn("./encryption").stdin("141").stdin("209").stdout("Failed\n").exit(0)
+		
+	@check("compiles")
+	def test_140_210(self):
+		"""Test 140 and 210 Yields Failed\n"""
+		self.spawn("./encryption").stdin("140").stdin("210").stdout("Failed\n").exit(0)
+	
+	
