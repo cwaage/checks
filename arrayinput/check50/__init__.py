@@ -17,6 +17,11 @@ class Array_Input(Checks):
         """rejects a input 0"""
         self.spawn("./array_input").stdin("0").reject()
 	
+	@check("compiles")
+	def test_reject_neg(self):
+		"""rejects a input -5"""
+		self.spawn("./array_input").stdin("-5").reject()
+	
     @check("compiles")
     def test_reject_paris(self):
 	    """rejects a non-numeric input of "Paris" """
