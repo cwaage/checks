@@ -40,4 +40,4 @@ class Array_Input(Checks):
     @check("compiles")
     def test_pass_8(self):
 	    """Accepts Array Size 8 && values 2,4,6,8,10,12,14,19 Output 2 4 6 8 10 12 14 19 """
-	    self.spawn("./array_input").stdin("8").stdin("2").stdin("4").stdin("6").stdin("8").stdin("10").stdin("12").stdin("14").stdin("19")..stdout("2 4 6 8 10 12 14 19 ").exit(0)
+	    self.spawn("./array_input").stdin("8").stdin("2").stdin("4").stdin("6").stdin("8").stdin("10").stdin("12").stdin("14").stdin("19").stdout("2 4 6 8 10 12 14 19 ").exit(0)
