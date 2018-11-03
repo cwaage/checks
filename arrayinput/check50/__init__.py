@@ -21,3 +21,8 @@ class Array_Input(Checks):
     def test_reject_paris(self):
 	    """rejects a non-numeric input of "Paris" """
 	    self.spawn("./array_input").stdin("Paris").reject()
+		
+    @check("compiles")
+    def test_reject_paris(self):
+	    """rejects a non-numeric input of "Zoe" """
+	    self.spawn("./array_input").stdin("Zoe").reject()
