@@ -23,6 +23,6 @@ class Array_Input(Checks):
 	    self.spawn("./array_input").stdin("Paris").reject()
 		
     @check("compiles")
-    def test_reject_paris(self):
+    def test_reject_zoe(self):
 	    """rejects a non-numeric input of "Zoe" """
 	    self.spawn("./array_input").stdin("Zoe").reject()
