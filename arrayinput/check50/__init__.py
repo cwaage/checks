@@ -26,3 +26,10 @@ class Array_Input(Checks):
     def test_reject_zoe(self):
 	    """rejects a non-numeric input of "Zoe" """
 	    self.spawn("./array_input").stdin("Zoe").reject()
+		
+    @check("compiles")
+    def test_pass_5(self):
+	    """Accepts Array Size 5 && values 1,2,3,4,5 Output 1 2 3 4 5 """
+	    self.spawn("./array_input").stdin("5").stdin("1").stdin("2").stdin("3").stdin("4").stdin("5").stout("1 2 3 4 5 ").exit(0)
+		
+
