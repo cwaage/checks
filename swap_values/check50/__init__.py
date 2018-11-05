@@ -14,13 +14,13 @@ class Swap_Vals(Checks):
         
 	@check("compiles")
 	def test_reject_zero(self):
-		"""rejects a input 0"""
- 		self.spawn("./swap_values").stdin("0").reject()
+		"""rejects an input of 0"""
+		self.spawn("./swap_values").stdin("0").reject()
 	
-	@check("compiles")
-	def test_reject_paris(self):
-		"""rejects a non-numeric input of "Daniel" """
-		self.spawn("./swap_values").stdin("Daniel").reject()
+	# @check("compiles")
+	# def test_reject_paris(self):
+		# """rejects a non-numeric input of "Daniel" """
+		# self.spawn("./swap_values").stdin("Daniel").reject()
 		
     #@check("compiles")
     #def test_reject_zoe(self):
