@@ -1,11 +1,11 @@
 from check50 import *
 
-class Swap_Vs(Checks):
+class Swap_Vals(Checks):
 
-    @check()
-    def exists(self):
-	"""swap_values.c exists"""
-	self.require("swap_values.c")
+	@check()
+	def exists(self):
+		"""swap_values.c exists"""
+		self.require("swap_values.c")
 
     #@check("exists")
     #def compiles(self):
