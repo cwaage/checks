@@ -27,15 +27,15 @@ class Swap_Vals(Checks):
 		"""rejects a non-numeric input of "Maya" """
 		self.spawn("./swap_values").stdin("Maya").reject()
         
-    #@check("compiles")
-    #def test_fail_2(self):
-	    #"""Reject Array Size 2 """
-	    #self.spawn("./swap_values").stdin("2").reject(0)
+	@check("compiles")
+	def test_fail_2(self):
+		"""Reject Array Size 2 """
+		self.spawn("./swap_values").stdin("2").reject(0)
         
-    #@check("compiles")
-    #def test_fail_12(self):
-	    #"""Reject Array Size 12 """
-	    #self.spawn("./swap_values").stdin("12").reject(0)
+	@check("compiles")
+	def test_fail_12(self):
+		"""Reject Array Size 12 """
+		self.spawn("./swap_values").stdin("12").reject(0)
         
     #@check("compiles")
     #def test_pass_3(self):
