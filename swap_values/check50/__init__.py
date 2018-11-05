@@ -35,7 +35,7 @@ class Swap_Vals(Checks):
 	@check("compiles")
 	def test_pass_3(self):
 		"""Accepts Array Size 4 && values 2 , 9 , 20 , 50 | Output 9 2 50 20 """
-		self.spawn("./swap_values").stdin("2").stdin("9").stdin("20").stdin("50").stdout("9 2 50 20 ").exit(0)
+		self.spawn("./swap_values").stdin("4").stdin("2").stdin("9").stdin("20").stdin("50").stdout("9 2 50 20 ").exit(0)
 		
     #@check("compiles")
     #def test_pass_5(self):
