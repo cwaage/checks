@@ -22,10 +22,10 @@ class Swap_Vals(Checks):
 		"""rejects a non-numeric input of "Daniel" """
 		self.spawn("./swap_values").stdin("Daniel").reject()
 		
-    #@check("compiles")
-    #def test_reject_zoe(self):
-	    #"""rejects a non-numeric input of "Maya" """
-	    #self.spawn("./swap_values").stdin("Maya").reject()
+	@check("compiles")
+	def test_reject_zoe(self):
+		"""rejects a non-numeric input of "Maya" """
+		self.spawn("./swap_values").stdin("Maya").reject()
         
     #@check("compiles")
     #def test_fail_2(self):
