@@ -5,7 +5,7 @@ class Swap_Values(Checks):
     @check()
     def exists(self):
         """swap_values.c exists"""
-        self.require("swap_vales.c")
+        self.require("swap_values.c")
 
     @check("exists")
     def compiles(self):
