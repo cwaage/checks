@@ -1,6 +1,6 @@
 from check50 import *
 
-class Swap_Values(Checks):
+class Swap_Vs(Checks):
 
     @check()
     def exists(self):
