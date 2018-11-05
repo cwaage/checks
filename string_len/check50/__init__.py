@@ -16,8 +16,3 @@ class String_Len(Checks):
     def test_reject_27(self):
       """rejects a numeric input of 27 """
       self.spawn("./string_len").stdin("27").reject()
-		
-    @check("compiles")
-    def test_reject_4.0(self):
-      """rejects a numeric input of 4.0 """
-      self.spawn("./string_len").stdin("4").reject()
