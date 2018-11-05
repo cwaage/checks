@@ -7,10 +7,10 @@ class Swap_Vals(Checks):
 		"""swap_values.c exists"""
 		self.require("swap_values.c")
 
-    #@check("exists")
-    #def compiles(self):
-        #"""swap_values.c compiles"""
-        #self.spawn("clang -o swap_values swap_values.c -lcs50 -lm").exit(0)
+	@check("exists")
+	def compiles(self):
+		"""swap_values.c compiles"""
+		self.spawn("clang -o swap_values swap_values.c -lcs50 -lm").exit(0)
         
     #@check("compiles")
     #def test_reject_zero(self):
