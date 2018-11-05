@@ -13,11 +13,6 @@ class Swap_Vals(Checks):
 		self.spawn("clang -o swap_values swap_values.c -lcs50 -lm").exit(0)
         
 	@check("compiles")
-	def test_reject_zero(self):
-		"""rejects an input of 0"""
-		self.spawn("./swap_values").stdin("0").reject()
-	
-	@check("compiles")
 	def test_reject_daniel(self):
 		"""rejects a non-numeric input of "Daniel" """
 		self.spawn("./swap_values").stdin("Daniel").reject()
@@ -37,10 +32,10 @@ class Swap_Vals(Checks):
 		"""Reject Array Size 12 """
 		self.spawn("./swap_values").stdin("12").reject(0)
         
-    #@check("compiles")
-    #def test_pass_3(self):
-	    #"""Accepts Array Size 4 && values 2 , 9 , 20 , 50 | Output 9 2 50 20 """
-	    #self.spawn("./swap_values").stdin("2").stdin("9").stdin("20").stdin("50").stdout("9 2 50 20 ").exit(0)
+	@check("compiles")
+	def test_pass_3(self):
+		"""Accepts Array Size 4 && values 2 , 9 , 20 , 50 | Output 9 2 50 20 """
+		self.spawn("./swap_values").stdin("2").stdin("9").stdin("20").stdin("50").stdout("9 2 50 20 ").exit(0)
 		
     #@check("compiles")
     #def test_pass_5(self):
