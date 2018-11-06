@@ -14,7 +14,7 @@ class String_Len(Checks):
  
     @check("compiles")
     def test_pass_0(self):
-        """Accepts String ""  Yields "0\n" """
+        """Accepts String ""  Yields "0\\n" """
         self.spawn("./string_len").stdin("").stdout("0\n").exit(0)
 
     @check("compiles")
