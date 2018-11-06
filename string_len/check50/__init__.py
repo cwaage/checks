@@ -14,20 +14,20 @@ class String_Len(Checks):
  
     @check("compiles")
     def test_pass_0(self):
-        """Accepts String ""  Output 0\n """
+        """Accepts String ""  Yields "0\n" """
         self.spawn("./string_len").stdin("").stdout("0\n").exit(0)
 
     @check("compiles")
     def test_pass_AK(self):
-        """Accepts String "Amelia"  Output 6\n """
+        """Accepts String "Amelia" Yields "6\n" """
         self.spawn("./string_len").stdin("Amelia").stdout("6\n").exit(0)
         
     @check("compiles")
     def test_pass_ewan(self):
-        """Accepts String "Ewan"  Output 4\n """
+        """Accepts String "Ewan" Yields "4\n" """
         self.spawn("./string_len").stdin("Ewan").stdout("4\n").exit(0)
 
     @check("compiles")
     def test_pass_crazy(self):
-        """Accepts String "sdkgbjs+ \/Wz"  Output 13\n """
+        """Accepts String "sdkgbjs+ \/Wz" Yields "13\n" """
         self.spawn("./string_len").stdin("sdkgbjs+ \/Wz").stdout("13\n").exit(0)
