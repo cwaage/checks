@@ -14,5 +14,10 @@ class String_Rev(Checks):
         
     @check("compiles")
     def test_pass_gub(self):
-        """Accepts String "bug"  Yields gub """
+        """Accepts String "bug"  Yields "gub" """
         self.spawn("./string_rev").stdin("bug").stdout("gub").exit(0)
+        
+    @check("compiles")
+    def test_pass_CSP(self):
+        """Accepts String "!PSC PA evol I"  Yields "I love AP CSP!" """
+        self.spawn("./string_rev").stdin("!PSC PA evol I").stdout("I love AP CSP!").exit(0)
