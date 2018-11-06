@@ -21,9 +21,7 @@ class String_Len(Checks):
     def test_pass_ewan(self):
         """Accepts String "Ewan"  Output 4\n """
         self.spawn("./string_len").stdin("Ewan").stdout("4\n").exit(0)
-        
-     sdkgbjs  \0\n=++
-    
+
     @check("compiles")
     def test_pass_crazy(self):
         """Accepts String "sdkgbjs  \0\n=++"  Output 16\n """
