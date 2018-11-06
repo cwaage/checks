@@ -24,5 +24,5 @@ class String_Len(Checks):
 
     @check("compiles")
     def test_pass_crazy(self):
-        """Accepts String "sdkgbjs  \0\n=++"  Output 16\n """
-        self.spawn("./string_len").stdin("sdkgbjs  \0\n=++").stdout("16\n").exit(0)
+        """Accepts String "sdkgbjs  +\/"  Output 12\n """
+        self.spawn("./string_len").stdin("sdkgbjs  \0\n=++").stdout("12\n").exit(0)
