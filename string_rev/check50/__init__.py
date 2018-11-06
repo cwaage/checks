@@ -21,3 +21,13 @@ class String_Rev(Checks):
     def test_pass_CSP(self):
         """Accepts String "!PSC PA evol I"  Yields "I love AP CSP!" """
         self.spawn("./string_rev").stdin("!PSC PA evol I").stdout("I love AP CSP!").exit(0)
+        
+    @check("compiles")
+    def test_pass_OBG(self):
+        """Accepts String "aivilO"  Yields "Olivia" """
+        self.spawn("./string_rev").stdin("aivilO").stdout("Olivia").exit(0)
+
+    @check("compiles")
+    def test_pass_Ewan(self):
+        """Accepts String "nawE"  Yields "Ewan" """
+        self.spawn("./string_rev").stdin("nawE").stdout("Ewan").exit(0)
