@@ -14,5 +14,5 @@ class SecretMessage(Checks):
  
     @check("compiles")
     def test_pass_25_values(self):
-      """Check Output of the Secret Message"""
+      """Check Output of the Secret Message: Help me, Obi-Wan Kenobi. You're my only hope!"""
       self.spawn("./secret_message").stdout("Help me, Obi-Wan Kenobi. You're my only hope!").exit(0)
