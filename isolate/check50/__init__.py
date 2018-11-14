@@ -20,7 +20,7 @@ class Isolate(Checks):
     @check("compiles")
     def test_fail_two_many_args(self):
         """Accepts Strings "Correctly Hands Too Many Arguments"""
-        self.spawn("./isolate Luke Thian ").stdout("").exit(1) 
+        self.spawn("./isolate Luke Thian Skylar").stdout("").exit(1) 
 
     @check("compiles")
     def test_pass_dog_cat(self):
