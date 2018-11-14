@@ -24,5 +24,5 @@ class Isolate(Checks):
 
     @check("compiles")
     def test_pass_dog_cat(self):
-        """Accepts Strings "dog cat"  Yields "d\\n o\\n g\\n c\\n a\\n t\\n" """
-        self.spawn("./isolate dog cat").stdout("d\n").stdout("o\n").stdout("g\n").stdout("c\n").stdout("a\n").stdout("t\n").exit(0)
+        """Accepts Strings "dog cat"  Yields "D\\n o\\n g\\n C\\n a\\n t\\n" """
+        self.spawn("./isolate Dog Cat").stdout("D\n").stdout("o\n").stdout("g\n").stdout("C\n").stdout("a\n").stdout("t\n").exit(0)
