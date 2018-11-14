@@ -14,5 +14,11 @@ class Isolate(Checks):
         
     @check("compiles")
     def test_pass_amelia(self):
+        """Accepts Strings "Correctly Hands To Few Arguments"""
+        self.spawn("./isolate").stdout("").exit(1)        
+
+        
+    @check("compiles")
+    def test_pass_amelia(self):
         """Accepts Strings "dog cat"  Yields "d\\n o\\n g\\n c\\n a\\n t\\n" """
         self.spawn("./isolate dog cat").stdout("d\n").stdout("o\n").stdout("g\n").stdout("c\n").stdout("a\n").stdout("t\n").exit(0)
