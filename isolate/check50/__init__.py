@@ -13,12 +13,12 @@ class Isolate(Checks):
         self.spawn("clang -o isolate isolate.c -lcs50 -lm").exit(0)
         
     @check("compiles")
-    def test_pass_amelia(self):
+    def test_fail_no_args(self):
         """Accepts Strings "Correctly Hands To Few Arguments"""
         self.spawn("./isolate").stdout("").exit(1)        
 
         
     @check("compiles")
-    def test_pass_amelia(self):
+    def test_pass_dog_cat(self):
         """Accepts Strings "dog cat"  Yields "d\\n o\\n g\\n c\\n a\\n t\\n" """
         self.spawn("./isolate dog cat").stdout("d\n").stdout("o\n").stdout("g\n").stdout("c\n").stdout("a\n").stdout("t\n").exit(0)
