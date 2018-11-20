@@ -23,7 +23,7 @@ class last_index(Checks):
         self.spawn("./lastIndex e Met").stdout("").exit(1) 
     
     @check("compiles")
-    def test_pass_End_match_case(self):
+    def test_pass_Begining_match_case(self):
         """Accepts Strings Correctly Handles Target \'T\' in String \"Thian\" """
         self.spawn("./lastIndex T").stdin("Thian").stdout("0").exit(0)
         
@@ -36,3 +36,8 @@ class last_index(Checks):
     def test_pass_End_match_case(self):
         """Accepts Strings Correctly Handles Target \'o\' in String \"Dalusio\" """
         self.spawn("./lastIndex o").stdin("Dalusio").stdout("6").exit(0)
+  
+    @check("compiles")
+    def test_pass_Not_Found(self):
+        """Accepts Strings Correctly Handles Target \'z\' in String \"Lewis-Shunk\" """
+        self.spawn("./lastIndex z").stdin("Lewis-Shunk").stdout("-1").exit(0)
