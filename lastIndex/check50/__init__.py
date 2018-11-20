@@ -26,3 +26,8 @@ class last_index(Checks):
     def test_pass_End_match_case(self):
         """Accepts Strings Correctly Handles Target \'T\' in String \"Thian\" """
         self.spawn("./lastIndex T").stdin("Thian").stdout("0").exit(0)
+        
+    @check("compiles")
+    def test_pass_Middle_match_case(self):
+        """Accepts Strings Correctly Handles Target \'k\' in String \"Heikkinen\" """
+        self.spawn("./lastIndex k").stdin("Heikkinen").stdout("4").exit(0)
