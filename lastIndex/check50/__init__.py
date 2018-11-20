@@ -36,6 +36,11 @@ class last_index(Checks):
     def test_pass_End_match_case(self):
         """Accepts Strings Correctly Handles Target \'o\' in String \"Dalusio\" """
         self.spawn("./lastIndex o").stdin("Dalusio").stdout("6").exit(0)
+        
+    @check("compiles")
+    def test_pass_Begining_Not_case(self):
+        """Accepts Strings Correctly Handles Target \'t\' in String \"Thanksgiving\" """
+        self.spawn("./lastIndex t").stdin("Thanksgiving").stdout("0").exit(0)
   
     @check("compiles")
     def test_pass_Not_Found(self):
