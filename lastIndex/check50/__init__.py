@@ -21,6 +21,11 @@ class last_index(Checks):
     def test_fail_too_many_args(self):
         """Accepts Strings Correctly Handles Too Many Arguments"""
         self.spawn("./lastIndex e Met").stdout("").exit(1) 
+  
+    @check("compiles")
+    def test_fail_target_not_char(self):
+        """Accepts Strings Correctly Handles Target Larger than single character"""
+        self.spawn("./lastIndex rr").stdout("").exit(1) 
     
     @check("compiles")
     def test_pass_Begining_match_case(self):
