@@ -41,6 +41,16 @@ class last_index(Checks):
     def test_pass_Begining_Not_case(self):
         """Accepts Strings Correctly Handles Target \'t\' in String \"Thanksgiving\" """
         self.spawn("./lastIndex t").stdin("Thanksgiving").stdout("0").exit(0)
+        
+    @check("compiles")
+    def test_pass_Middle_Not_case(self):
+        """Accepts Strings Correctly Handles Target \'M\' in String \"Pumpkin\" """
+        self.spawn("./lastIndex M").stdin("Pumpkin").stdout("2").exit(0)
+        
+    @check("compiles")
+    def test_pass_End_Not_case(self):
+        """Accepts Strings Correctly Handles Target \'G\' in String \"Stuffing\" """
+        self.spawn("./lastIndex G").stdin("Stuffing").stdout("7").exit(0)
   
     @check("compiles")
     def test_pass_Not_Found(self):
