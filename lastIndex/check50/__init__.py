@@ -14,10 +14,10 @@ class last_index(Checks):
    
     @check("compiles")
     def test_fail_no_args(self):
-        """Accepts Strings Correctly Hands Too Few Arguments"""
+        """Accepts Strings Correctly Handles Too Few Arguments"""
         self.spawn("./lastIndex").stdout("").exit(1) 
         
     @check("compiles")
-    def test_fail_no_args(self):
-        """Accepts Strings Correctly Hands Too Many Arguments"""
+    def test_fail_too_many_args(self):
+        """Accepts Strings Correctly Handles Too Many Arguments"""
         self.spawn("./lastIndex e Met").stdout("").exit(1) 
