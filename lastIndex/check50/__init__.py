@@ -56,3 +56,8 @@ class last_index(Checks):
     def test_pass_Not_Found(self):
         """Accepts Strings Correctly Handles Target \'z\' in String \"Lewis-Shunk\" """
         self.spawn("./lastIndex z").stdin("Lewis-Shunk").stdout("-1").exit(0)
+        
+    @check("compiles")
+    def test_pass_Not_Found(self):
+        """Accepts Strings Correctly Handles Target \'$\' in String \"Jenson\" """
+        self.spawn("./lastIndex $").stdin("Jenson").stdout("-1").exit(0)
