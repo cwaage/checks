@@ -11,3 +11,13 @@ class last_index(Checks):
     def compiles(self):
         """lastIndex.c compiles"""
         self.spawn("clang -o lastIndex lastIndex.c -lcs50 -lm").exit(0)
+   
+    @check("compiles")
+    def test_fail_no_args(self):
+        """Accepts Strings Correctly Hands Too Few Arguments"""
+        self.spawn("./lastIndex").stdout("").exit(1) 
+        
+    @check("compiles")
+    def test_fail_no_args(self):
+        """Accepts Strings Correctly Hands Too Many Arguments"""
+        self.spawn("./lastIndex e Met").stdout("").exit(1) 
