@@ -46,10 +46,10 @@ class Geometry(Checks):
     @check("compiles")
     def test5(self):
         """Compiles and then runs invalid triangle length negative or 0, then invalid lengths, area of triangle 3, 4, 5"""
-        self.spawn("./geometry").stdin("1").stdin("3")\
-            .stdin("-7").stdin("0").stdin("7").stdout("Invalid inputs. All sides must be > 0.\n")\
-            .stdin("3").stdin("4").stdin("50").stdout("Invalid inputs. The sum of two sides must be > the third side.")\
-            .stdin("3").stdin("4").stdin("5").stdout("The triangle's area is 6.0.\n").exit(0)
+        self.spawn("./geometry area").stdin("3")\
+            .stdin("-7").stdin("0")\ # Base
+            .stdin("-2").stdin("0")\ # Height
+            .stdin("3").stdin("4").stdout("The triangle's area is 6.00.\n").exit(0)
 
     @check("compiles")
     def test6(self):
