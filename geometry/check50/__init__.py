@@ -47,8 +47,10 @@ class Geometry(Checks):
     def test5(self):
         """Compiles and then runs invalid triangle length negative or 0, then invalid lengths, area of triangle 3, 4, 5"""
         self.spawn("./geometry area").stdin("3")\
-            .stdin("-7").stdin("0")\ # Base
-            .stdin("-2").stdin("0")\ # Height
+            # Bad Base Inputs
+            .stdin("-7").stdin("0")\
+            # Bad Height Inputs
+            .stdin("-2").stdin("0")\
             .stdin("3").stdin("4").stdout("The triangle's area is 6.00.\n").exit(0)
 
     @check("compiles")
