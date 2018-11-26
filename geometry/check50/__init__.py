@@ -45,26 +45,24 @@ class Geometry(Checks):
 
     @check("compiles")
     def test5(self):
-        """Compiles and then runs invalid triangle length negative or 0, then invalid lengths, area of triangle 3, 4"""
+        """Compiles and then runs invalid triangle length negative or 0, then area of triangle 3, 4"""
         self.spawn("./geometry area").stdin("3").stdin("-7").stdin("0").stdin("-2").stdin("0").stdin("3").stdin("4").stdout("The triangle's area is 6.00.\n").exit(0)
 
     @check("compiles")
     def test6(self):
         """Compiles and then runs invalid rectangle lengths (negative and 0), then perimeter of rectangle 4 x 5"""
-        self.spawn("./geometry").stdin("2").stdin("1").stdin("-1").stdin("0").stdin("4").stdin("5").stdout("The rectangle's perimeter is 18.\n").exit(0)
+        self.spawn("./geometry perimeter").stdin("1").stdin("-1").stdin("0").stdin("4").stdin("5").stdout("The rectangle's perimeter is 18.\n").exit(0)
 
     @check("compiles")
     def test7(self):
         """Compiles and then runs invalid square length negative or 0, then perimeter of square 7"""
-        self.spawn("./geometry").stdin("2").stdin("2").stdin("-7").stdin("0").stdin("7").stdout("The square's perimeter is 28.\n").exit(0)
+        self.spawn("./geometry perimeter").stdin("2").stdin("-7").stdin("0").stdin("7").stdout("The square's perimeter is 28.\n").exit(0)
 
     @check("compiles")
     def test8(self):
-        """Compiles and then runs invalid triangle length negative or 0, then invalid lengths, then perimeter of triangle 3, 4, 5"""
-        self.spawn("./geometry").stdin("2").stdin("3")\
-            .stdin("-7").stdin("0").stdin("7").stdout("Invalid inputs. All sides must be > 0.\n")\
-            .stdin("3").stdin("4").stdin("50").stdout("Invalid inputs. The sum of two sides must be > the third side.")\
-            .stdin("3").stdin("4").stdin("5").stdout("The triangle's perimeter is 12.\n").exit(0)
+        """Compiles and then runs invalid triangle length negative or 0, then invalid lengths, then perimeter of triangle 3, 4"""
+        self.spawn("./geometry perimeter").stdin("2").stdin("3")\
+            .stdin("-7").stdin("0").stdin("3").stdin("0").stdin("-6").stdin("4").stdout("The triangle's perimeter is 12.00\n").exit(0)
 
 
 def number(num):
