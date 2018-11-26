@@ -16,12 +16,12 @@ class Geometry(Checks):
     @check("exists")
     def test_fail_no_args(self):
         """Correctly handles no arguments"""
-        self.spawn("./geometry").exit(1)
+        self.spawn("./geometry").stdout("").exit(1)
         
     @check("exists")
     def test_fail_too_manyh_args(self):
         """Correctly handles too many arguments"""
-        self.spawn("./geometry area perimeter").exit(1)        
+        self.spawn("./geometry area perimeter").stdout("").exit(1)        
 
     @check("compiles")
     def test1(self):
