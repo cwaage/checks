@@ -16,12 +16,12 @@ class Geometry(Checks):
     @check("compiles")
     def test1(self):
         """Compiles and then runs invalid menu item 1, then area of rectangle 10 x 10"""
-        self.spawn("./geometry").stdin("-1").stdin("0").stdin("1").stdin("1").stdin("10").stdin("10").stdout("The rectangle's area is 100.\n").exit(0)
+        self.spawn("./geometry area").stdin("-1").stdin("0").stdin("1").stdin("10").stdin("10").stdout("The rectangle's area is 100\n").exit(0)
 
     @check("compiles")
     def test2(self):
         """Compiles and then runs invalid rectangle lengths (negative and 0), then area of rectangle 4 x 5"""
-        self.spawn("./geometry").stdin("1").stdin("1").stdin("-1").stdin("0").stdin("4").stdin("5").stdout("The rectangle's area is 20.\n").exit(0)
+        self.spawn("./geometry area").stdin("1").stdin("-1").stdin("0").stdin("4").stdin("5").stdout("The rectangle's area is 20\n").exit(0)
 
     @check("compiles")
     def test3(self):
