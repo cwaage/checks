@@ -62,7 +62,7 @@ class Geometry(Checks):
     def test8(self):
         """Compiles and then runs invalid triangle length negative or 0, then invalid lengths, then perimeter of triangle 3, 3"""
         self.spawn("./geometry perimeter").stdin("-3").stdin("3")\
-            .stdin("-7").stdin("0").stdin("3").stdin("0").stdin("-6").stdin("3").stdout("The triangle's perimeter is 10.24\n").exit(0)
+            .stdin("-7").stdin("0").stdin("3").stdin("0").stdin("-6").stdin("3").stdout("The triangle's perimeter is 10.24.\n").exit(0)
 
 
 def number(num):
