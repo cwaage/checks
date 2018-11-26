@@ -31,7 +31,7 @@ class Geometry(Checks):
     @check("compiles")
     def test2(self):
         """Compiles and then checks invalid rectangle lengths (negative and 0), then area of rectangle 4 x 5"""
-        self.spawn("./geometry area").stdin("1").stdin("-1").stdin("0").stdin("4").stdin("5").stdout("The rectangle's area is 20.\n").exit(0)
+        self.spawn("./geometry area").stdin("1").stdin("-1").stdin("4").stdin("0").stdin("5").stdout("The rectangle's area is 20.\n").exit(0)
 
     @check("compiles")
     def test3(self):
@@ -51,7 +51,7 @@ class Geometry(Checks):
     @check("compiles")
     def test6(self):
         """Compiles and then runs invalid rectangle lengths (negative and 0), then perimeter of rectangle 4 x 5"""
-        self.spawn("./geometry perimeter").stdin("1").stdin("-1").stdin("0").stdin("4").stdin("5").stdout("The rectangle's perimeter is 18.\n").exit(0)
+        self.spawn("./geometry perimeter").stdin("1").stdin("-1").stdin("4").stdin("0").stdin("5").stdout("The rectangle's perimeter is 18.\n").exit(0)
 
     @check("compiles")
     def test7(self):
@@ -60,9 +60,9 @@ class Geometry(Checks):
 
     @check("compiles")
     def test8(self):
-        """Compiles and then runs invalid triangle length negative or 0, then invalid lengths, then perimeter of triangle 3, 4"""
+        """Compiles and then runs invalid triangle length negative or 0, then invalid lengths, then perimeter of triangle 3, 3"""
         self.spawn("./geometry perimeter").stdin("2").stdin("3")\
-            .stdin("-7").stdin("0").stdin("3").stdin("0").stdin("-6").stdin("4").stdout("The triangle's perimeter is 12.00\n").exit(0)
+            .stdin("-7").stdin("0").stdin("3").stdin("0").stdin("-6").stdin("3").stdout("The triangle's perimeter is 10.24\n").exit(0)
 
 
 def number(num):
