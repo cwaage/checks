@@ -19,7 +19,7 @@ class Binary_Find(Checks):
         
     @check("compiles")
     def test_found_22(self):
-        """Finds 40 at index = 4, count = 4"""
+        """Finds 22 at index = 4, count = 4"""
         self.spawn("./binaryFind").stdin("22").stdout("4 4").exit(0) 
         
     @check("compiles")
@@ -49,6 +49,6 @@ class Binary_Find(Checks):
         
     @check("compiles")
     def test_notfound_75(self):
-        """Does Not Find 75 prints -1, count = 5"""
-        self.spawn("./binaryFind").stdin("75").stdout("-1 5").exit(0) 
+        """Does Not Find 75 prints -1, count = 4"""
+        self.spawn("./binaryFind").stdin("75").stdout("-1 4").exit(0) 
 
