@@ -15,4 +15,4 @@ class Binary_Find(Checks):
     @check("compiles")
     def test_found_40(self):
         """Finds 40 at index = 6, count = 4"""
-        self.spawn("./flip_string").stdin("40").stdout("6 4").exit(0)
+        self.spawn("./binaryFind").stdin("40").stdout("6 4").exit(0)
