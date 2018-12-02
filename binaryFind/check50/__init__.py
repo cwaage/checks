@@ -11,6 +11,21 @@ class Binary_Find(Checks):
     def compiles(self):
         """binaryFind.c compiles"""
         self.spawn("clang -o binaryFind binaryFind.c -lcs50 -lm").exit(0)
+    
+    @check("compiles")
+    def test_found_42(self):
+        """Finds 42 at index = 7, count = 1"""
+        self.spawn("./binaryFind").stdin("42").stdout("7 1").exit(0)    
+    
+    @check("compiles")
+    def test_found_11(self):
+        """Finds 11 at index = 3, count = 2"""
+        self.spawn("./binaryFind").stdin("11").stdout("3 2").exit(0)    
+    
+    @check("compiles")
+    def test_found_55(self):
+        """Finds 55 at index = 11, count = 2"""
+        self.spawn("./binaryFind").stdin("55").stdout("11 2").exit(0)
         
     @check("compiles")
     def test_found_40(self):
