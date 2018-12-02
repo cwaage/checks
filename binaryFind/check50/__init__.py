@@ -18,9 +18,9 @@ class Binary_Find(Checks):
         self.spawn("./binaryFind").stdin("40").stdout("6 4").exit(0)
         
     @check("compiles")
-    def test_found_40(self):
-        """Finds 40 at index = 6, count = 4"""
-        self.spawn("./binaryFind").stdin("40").stdout("6 4").exit(0) 
+    def test_found_22(self):
+        """Finds 40 at index = 4, count = 4"""
+        self.spawn("./binaryFind").stdin("22").stdout("4 4").exit(0) 
         
     @check("compiles")
     def test_found_7(self):
@@ -35,7 +35,7 @@ class Binary_Find(Checks):
     @check("compiles")
     def test_found_65(self):
         """Finds 65 at index = 13, count = 3"""
-        self.spawn("./binaryFind").stdin("40").stdout("13 3").exit(0) 
+        self.spawn("./binaryFind").stdin("65").stdout("13 3").exit(0) 
 
     @check("compiles")
     def test_found_2(self):
@@ -49,6 +49,6 @@ class Binary_Find(Checks):
         
     @check("compiles")
     def test_notfound_75(self):
-        """Does Not Find 75 prints -1, count = 4"""
+        """Does Not Find 75 prints -1, count = 5"""
         self.spawn("./binaryFind").stdin("75").stdout("-1 5").exit(0) 
 
