@@ -25,5 +25,10 @@ class Weave(Checks):
     
     @check("compiles")
     def test_pass_cat_dog_inputs(self):
-        """Correctly handles \".\/computeAve cat dog \" """
-        self.spawn("./weave cat dog").stdout("cot\n").exit(0) 
+        """Correctly handles \"./weave cat dog\" """
+        self.spawn("./weave cat dog").stdout("cot\n").exit(0)
+        
+    @check("compiles")
+    def test_pass_mice_elephants_inputs(self):
+        """Correctly handles \"./weave cat dog\" """
+        self.spawn("./weave mice elephants").stdout("mlcp\n").exit(0) 
