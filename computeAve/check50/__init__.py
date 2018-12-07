@@ -30,7 +30,7 @@ class Computer_Average(Checks):
     
     @check("compiles")
     def test_pass_1_inputs(self):
-        """Correctly handles 1 deposit arguments"""
+        """Correctly handles a single deposit"""
         self.spawn("./computeAve 1").stdin("50.55").stdout("Your average deposit is $50.55\n").exit(0)   
   
     @check("compiles")
