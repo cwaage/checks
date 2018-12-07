@@ -31,9 +31,9 @@ class Computer_Average(Checks):
     @check("compiles")
     def test_pass_1_inputs(self):
         """Correctly handles a single deposit"""
-        self.spawn("./computeAve 1").stdin("50.55").stdout("Your average deposit is $50.55\n").exit(0)   
+        self.spawn("./computeAve 1").stdin("50.55").stdout("Your average deposit is 50.55\n").exit(0)   
   
     @check("compiles")
     def test_pass_5_inputs(self):
         """Correctly handles 5 deposits arguments"""
-        self.spawn("./computeAve 5").stdin("5.99").stdin("4.50").stdin("200.02").stdin("100.50").stdin("20.02").stdout("Your average deposit is $66.21\n").exit(0)   
+        self.spawn("./computeAve 5").stdin("5.99").stdin("4.50").stdin("200.02").stdin("100.50").stdin("20.02").stdout("Your average deposit is 66.21\n").exit(0)   
