@@ -19,6 +19,11 @@ class Computer_Average(Checks):
         self.spawn("./computeAve").stdout("").exit(1)
         
     @check("compiles")
+    def test_fail_string_arg(self):
+        """Correctly handles command line of \"5\" arguments"""
+        self.spawn("./computeAve five").stdout("").exit(1)
+        
+    @check("compiles")
     def test_fail_too_manyh_args(self):
         """Correctly handles too many arguments"""
         self.spawn("./computeAve 5 10").stdout("").exit(1)  
@@ -26,7 +31,7 @@ class Computer_Average(Checks):
     @check("compiles")
     def test_pass_1_inputs(self):
         """Correctly handles 1 deposit arguments"""
-        self.spawn("./computeAve 1").stdin("50.55").stdout("Your average deposit is $50.55").exit(0)   
+        self.spawn("./computeAve 1").stdin("50.55").stdout("Your average deposit is $50.55\n").exit(0)   
   
     @check("compiles")
     def test_pass_5_inputs(self):
