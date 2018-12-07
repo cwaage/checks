@@ -20,7 +20,7 @@ class Computer_Average(Checks):
         
     @check("compiles")
     def test_fail_string_arg(self):
-        """Correctly handles command line of \"5\" arguments"""
+        """Correctly rejects command-line argument \"five\" """
         self.spawn("./computeAve five").stdout("").exit(1)
         
     @check("compiles")
